@@ -1,4 +1,5 @@
 #include <cassert>
+#include <cstdio>
 #include <cstring>
 
 #include <stdint.h>
@@ -30,14 +31,12 @@ instrument::get_parameter(const char* name, unsigned int& num)
 	return false;
 }
 
-#include <cstdio>
-
 void
 instrument::set_parameter_value(unsigned int p, int v)
 {
 	assert(p < _parameters);
 
-	fprintf(stderr, "[DEBUG] p[%u] = %d\n", p, v);
+	fprintf(stderr, "[DEBUG] p[%u/%s] = %d\n", p, _parameter_names[p], v);
 
 	_parameter_values[p] = v;
 }
