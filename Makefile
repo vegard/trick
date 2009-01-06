@@ -6,4 +6,4 @@ clean:
 	rm -rf trick
 
 trick: main.cc synth/*.cc
-	g++ -Wall -W -Werror -o $@ $^
+	g++ -Wall -W -o $@ $^

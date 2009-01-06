@@ -12,12 +12,13 @@ int main()
 	s->set_parameter_value(p_period,
 		64 * 48000. / 13.75 / pow(2, 60. / 12));
 
-	unsigned int p_velocity;
-	s->get_parameter("velocity", p_velocity);
-	s->set_parameter_value(p_velocity, 2048);
+	unsigned int p_volume;
+	s->get_parameter("volume", p_volume);
+	s->set_parameter_value(p_volume, 2048);
 
 	int16_t buf[8192];
-	s->generate(buf, 8192);
+	int16_t* outputs[1] = {buf};
+	s->process(8192, NULL, outputs);
 
 	FILE* f = fopen("output.raw", "w");
 	fwrite(buf, sizeof(*buf), 8192, f);

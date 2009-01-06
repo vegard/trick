@@ -6,11 +6,18 @@
 
 #include "instrument.hh"
 
-instrument::instrument(unsigned int n, const char* parameter_names[]):
-	_parameter_names(parameter_names)
+instrument::instrument(unsigned int parameters, const char* parameter_names[],
+	unsigned int inputs, const char* input_names[],
+	unsigned int outputs, const char* output_names[]):
+	_parameter_names(parameter_names),
+	_input_names(input_names),
+	_output_names(output_names)
 {
-	_parameters = n;
+	_parameters = parameters;
 	_parameter_values = new int[_parameters];
+
+	_inputs = inputs;
+	_outputs = outputs;
 }
 
 instrument::~instrument()
