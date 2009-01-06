@@ -26,7 +26,7 @@ static const char* output_names[] = {
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof(*x))
 
 square::square():
-	instrument(ARRAY_SIZE(parameter_names), parameter_names,
+	device(ARRAY_SIZE(parameter_names), parameter_names,
 		0, NULL,
 		ARRAY_SIZE(output_names), output_names),
 	amplitude(0),

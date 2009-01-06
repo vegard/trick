@@ -1,14 +1,14 @@
-#ifndef INSTRUMENT_HH
-#define INSTRUMENT_HH
+#ifndef DEVICE_HH
+#define DEVICE_HH
 
 #include <stdint.h>
 
-class instrument {
+class device {
 public:
-	instrument(unsigned int parameters, const char* parameter_names[],
+	device(unsigned int parameters, const char* parameter_names[],
 		unsigned int inputs, const char* input_names[],
 		unsigned int outputs, const char* output_names[]);
-	virtual ~instrument();
+	virtual ~device();
 
 public:
 	/* XXX: Make input const */

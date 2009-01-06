@@ -3,9 +3,9 @@
 
 #include <stdint.h>
 
-#include "instrument.hh"
+#include "device.hh"
 
-class square: public instrument {
+class square: public device {
 public:
 	square();
 	~square();
