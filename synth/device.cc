@@ -4,7 +4,7 @@
 
 #include <stdint.h>
 
-#include "device.hh"
+#include "synth/device.hh"
 
 device::device(unsigned int parameters, const char* parameter_names[],
 	unsigned int inputs, const char* input_names[],

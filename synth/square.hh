@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#include "device.hh"
+#include "synth/device.hh"
 
 class square: public device {
 public:

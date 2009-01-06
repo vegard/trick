@@ -2,7 +2,8 @@
 
 #include <stdint.h>
 
-#include "square.hh"
+#include "array.hh"
+#include "synth/square.hh"
 
 enum {
 	PARAMETER_PERIOD,
@@ -22,8 +23,6 @@ enum {
 static const char* output_names[] = {
 	"mono",
 };
-
-#define ARRAY_SIZE(x) (sizeof(x) / sizeof(*x))
 
 square::square():
 	device(ARRAY_SIZE(parameter_names), parameter_names,
