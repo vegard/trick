@@ -1,10 +1,12 @@
 #include <cstdio>
 #include <cmath>
 
+#include "synth/file-writer.hh"
 #include "synth/square.hh"
 
 int main()
 {
+	file_writer* fw = new file_writer("output.raw");
 	square* s = new square();
 
 	unsigned int p_period;
@@ -18,13 +20,12 @@ int main()
 
 	int16_t buf[8192];
 	int16_t* outputs[1] = {buf};
+	int16_t* inputs[1] = {buf};
 	s->process(8192, NULL, outputs);
-
-	FILE* f = fopen("output.raw", "w");
-	fwrite(buf, sizeof(*buf), 8192, f);
-	fclose(f);
+	fw->process(8192, inputs, NULL);
 
 	delete s;
+	delete fw;
 
 	return 0;
 }
