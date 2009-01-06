@@ -1,5 +1,5 @@
-#ifndef DEVICE_HH
-#define DEVICE_HH
+#ifndef TRICK_SYNTH_DEVICE_HH
+#define TRICK_SYNTH_DEVICE_HH
 
 #include <stdint.h>
 

@@ -1,5 +1,5 @@
-#ifndef SQUARE_HH
-#define SQUARE_HH
+#ifndef TRICK_SYNTH_SQUARE_HH
+#define TRICK_SYNTH_SQUARE_HH
 
 #include <stdint.h>
 
